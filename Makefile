@@ -1,7 +1,7 @@
 # Makefile for Windows using MinGW
 CC = g++
 CFLAGS = -Wall -O2
-LDFLAGS = 
+LDFLAGS =
 TARGET = flight_simulation.exe
 SOURCES = flight_simulation.cpp
 OBJECTS = flight_simulation.o
@@ -15,6 +15,6 @@ $(OBJECTS): $(SOURCES)
 	$(CC) $(CFLAGS) -c $(SOURCES)
 
 clean:
-	del $(TARGET) $(OBJECTS)
+	-rm -f $(TARGET) $(OBJECTS)
 
 .PHONY: all clean
